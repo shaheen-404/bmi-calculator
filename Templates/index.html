@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BMI Calculator</title>
+	<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+	<div class="container">
+		<h1>BMI Calculator</h1>
+		<form method="POST">
+			<label>Height (cm):</label>
+			<input type="number" name="height" required>
+			<label>Weight (kg):</label>
+			<input type="number" name="weight" required>
+			<button type="submit">Calculate</button>
+		</form>
+		{% if bmi %}
+			<div class="result">BMI: {{ bmi }} — {{ category }}</div>
+		{% endif %}
+	</div>
+</body>
+</html>
